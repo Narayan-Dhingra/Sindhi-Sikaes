@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="list_title">16sp</dimen>
+    <dimen name="list_title">20sp</dimen>
     <dimen name="play_icon_size">32dp</dimen>
     <dimen name="card_elevation">4dp</dimen>
     <dimen name="card_corner_radius">8dp</dimen>

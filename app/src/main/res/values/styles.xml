@@ -14,7 +14,7 @@
         <item name="android:layout_height">@dimen/play_icon_size</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
-        <item name="android:layout_marginEnd">@dimen/margin8</item>
+        <item name="android:layout_marginEnd">@dimen/margin16</item>
         <item name="android:src">@drawable/ic_play_sound</item>
     </style>
 

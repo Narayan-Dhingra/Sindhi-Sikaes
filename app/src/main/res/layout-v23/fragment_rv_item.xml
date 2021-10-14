@@ -60,6 +60,8 @@
             <ImageView
                 android:id="@+id/icPlay"
                 style="@style/list_ic"
+                android:clickable="true"
+                android:focusable="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
