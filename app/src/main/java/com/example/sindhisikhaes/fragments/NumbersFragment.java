@@ -59,9 +59,6 @@ public class NumbersFragment extends Fragment {
         prepareWordList();
         prepareAdapterAndRv();
 
-
-
-
     }
 
     private void prepareAdapterAndRv() {
