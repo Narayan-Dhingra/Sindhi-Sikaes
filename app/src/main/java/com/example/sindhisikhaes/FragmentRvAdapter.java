@@ -24,7 +24,6 @@ import java.util.List;
 public class FragmentRvAdapter extends RecyclerView.Adapter<FragmentRvAdapter.MyViewHolder> {
 
     private Context context;
-    private Fragment fragment;
     private List<Word> wordList;
     int colorId;
 
