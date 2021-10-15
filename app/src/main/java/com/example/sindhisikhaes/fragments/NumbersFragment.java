@@ -42,11 +42,6 @@ public class NumbersFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentRvBinding.inflate(inflater, container, false);
 
-        prepareWordList();
-
-        adapter = new FragmentRvAdapter(getContext(), wordList, R.color.category_numbers);
-        binding.recyclerview.setAdapter(adapter);
-
         return binding.getRoot();
 
     }

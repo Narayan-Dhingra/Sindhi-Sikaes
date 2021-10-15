@@ -5,7 +5,8 @@ import androidx.annotation.NonNull;
 public class Word {
 
     private String sindhiTranslation, englishTranslation;
-    private int imageId, audioResource;
+    private int imageId = NO_IMG, audioResource;
+    private static final int NO_IMG = 1;
 
     public Word(String sindhiTranslation, String englishTranslation, int imageId, int audioResource) {
         this.sindhiTranslation = sindhiTranslation;
@@ -50,6 +51,10 @@ public class Word {
 
     public void setAudioResource(int audioResource) {
         this.audioResource = audioResource;
+    }
+
+    public boolean hasImage() {
+        return (imageId != NO_IMG);
     }
 
     @NonNull
