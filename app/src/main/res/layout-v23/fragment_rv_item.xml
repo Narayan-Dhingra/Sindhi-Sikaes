@@ -18,7 +18,7 @@
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:foreground="?attr/selectableItemBackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -52,6 +52,7 @@
             <TextView
                 android:id="@+id/tvEnglishTrans"
                 style="@style/list_title"
+                android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tvSindhiTrans"
                 app:layout_constraintTop_toBottomOf="@+id/tvSindhiTrans"
