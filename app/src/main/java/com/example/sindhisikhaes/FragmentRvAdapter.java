@@ -106,7 +106,6 @@ public class FragmentRvAdapter extends RecyclerView.Adapter<FragmentRvAdapter.My
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Word word = wordList.get(holder.getAbsoluteAdapterPosition());
                 Log.d("narayan", "Current word object in Colors category: " + word);
 
                 freeMediaResources();
