@@ -1,5 +1,6 @@
 package com.example.sindhisikhaes;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.media.AudioAttributes;
 import android.media.AudioFocusRequest;
@@ -90,15 +91,23 @@ public class FragmentRvAdapter extends RecyclerView.Adapter<FragmentRvAdapter.My
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Word word = wordList.get(position);
         int color = ContextCompat.getColor(context, colorId);
-        holder.image.setImageResource(word.getImageId());
+        if (word.hasImage()) {
+            holder.image.setImageResource(word.getImageId());
+        }
+        else {
+            holder.image.setVisibility(View.GONE);
+        }
         holder.constraintLayout.setBackgroundColor(color);
         holder.englishTranslation.setText(word.getEnglishTranslation());
         holder.sindhiTranslation.setText(word.getSindhiTranslation());
 
+
+
+
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Word word = wordList.get(position);
+                Word word = wordList.get(holder.getAbsoluteAdapterPosition());
                 Log.d("narayan", "Current word object in Colors category: " + word);
 
                 freeMediaResources();
