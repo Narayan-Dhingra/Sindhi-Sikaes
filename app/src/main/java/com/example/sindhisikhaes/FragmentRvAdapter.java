@@ -100,9 +100,6 @@ public class FragmentRvAdapter extends RecyclerView.Adapter<FragmentRvAdapter.My
         holder.englishTranslation.setText(word.getEnglishTranslation());
         holder.sindhiTranslation.setText(word.getSindhiTranslation());
 
-
-
-
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -150,7 +147,7 @@ public class FragmentRvAdapter extends RecyclerView.Adapter<FragmentRvAdapter.My
         return wordList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
         ImageView image;
         TextView englishTranslation, sindhiTranslation;
         ConstraintLayout constraintLayout;
