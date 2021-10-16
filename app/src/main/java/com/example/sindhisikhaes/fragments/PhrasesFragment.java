@@ -48,7 +48,7 @@ public class PhrasesFragment extends Fragment {
     }
 
     private void prepareAdapterAndRv() {
-        adapter = new FragmentRvAdapter(getContext(), wordList, R.color.category_phrases);
+        adapter = new FragmentRvAdapter(getActivity(), wordList, R.color.category_phrases);
         binding.recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.recyclerview.setAdapter(adapter);
     }
@@ -66,5 +66,11 @@ public class PhrasesFragment extends Fragment {
         wordList.add(new Word("Yes, I'm coming.", "Haan, maa ache toh.", R.raw.audio_phrase_yes_im_coming));
         wordList.add(new Word("Lets Go.", "Hal.", R.raw.audio_phrase_lets_go));
         wordList.add(new Word("Come Here.", "Hede Ach.", R.raw.audio_phrase_come_here));
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.freeMediaResources();
     }
 }

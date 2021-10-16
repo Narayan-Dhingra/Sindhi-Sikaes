@@ -69,4 +69,9 @@ public class ColorsFragment extends Fragment {
         wordList.add(new Word("Blue", "Neero", R.drawable.color_gray, R.raw.audio_color_gray));
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.freeMediaResources();
+    }
 }

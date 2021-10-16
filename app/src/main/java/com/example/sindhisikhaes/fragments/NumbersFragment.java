@@ -80,5 +80,9 @@ public class NumbersFragment extends Fragment {
         wordList.add(new Word("Ten", "Dae", R.drawable.number_ten, R.raw.audio_number_ten));
     }
 
-
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.freeMediaResources();
+    }
 }

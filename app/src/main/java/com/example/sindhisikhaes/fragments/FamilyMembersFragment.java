@@ -69,4 +69,9 @@ public class FamilyMembersFragment extends Fragment {
         wordList.add(new Word("GrandFather", "Dado", R.drawable.family_grandfather, R.raw.audio_family_grandfather));
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.freeMediaResources();
+    }
 }
